@@ -10,8 +10,8 @@ RUN wget -O /tmp/helm.tar.gz https://get.helm.sh/helm-v3.2.1-linux-amd64.tar.gz 
 RUN chmod +x /opt/bitnami/helm/helm
 
 # Set required variables
-ENV KUBECONFIG=/root/kubeconfig.yaml
-ENV GOOGLE_APPLICATION_CREDENTIALS=/root/google-key.json
+ENV KUBECONFIG=/tmp/kubeconfig.yaml
+ENV GOOGLE_APPLICATION_CREDENTIALS=/tmp/google-key.json
 
 ENV BITNAMI_APP_NAME="helm" \
     BITNAMI_IMAGE_VERSION="3.2.1-debian-10-r14" \
