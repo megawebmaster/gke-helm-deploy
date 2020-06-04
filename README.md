@@ -17,7 +17,18 @@ megawebmaster/gke-helm-deploy:3.2.1-1 | 1.18.3  | 3.2.1
     > cluster=your-cluster-name zone=your-zone ./build-kubeconfig.sh
 2. Add generated file to your project's repository
 3. Add Jenkins stage that binds `kubeconfig.yaml`, Google Cloud key files and your chart 
-into the image and run `upgrade your-deployment-name /root/chart` 
+into the image and run `upgrade your-deployment-name /root/chart`
+
+Example:
+
+```
+docker run --rm \
+    -v /home/helm/google-key.json:/root/google-key.json \
+    -v /home/helm/chart:/root/chart \
+    -v /home/helm/kubeconfig.yaml:/root/kubeconfig.yaml \
+  megawebmaster/gke-helm-deploy:3.2.1-1 \
+  upgrade my-app /root/chart
+``` 
 
 ## Security
 
