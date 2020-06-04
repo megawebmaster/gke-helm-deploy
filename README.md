@@ -4,6 +4,13 @@ Docker image that can run Helm deploys on Kubernetes in Google Cloud!
 
 This image is based on Bitnami's `kubectl` image.
 
+## Versions
+
+Image   | kubectl | Helm  
+------- | ------- | -----
+3.0.2-1 | 1.12.10 | 3.0.2
+3.2.1-1 | 1.18.3  | 3.2.1
+
 # How to use it?
 
 1. Generate your `kubeconfig.yaml` file using `build-kubeconfig.sh` command
