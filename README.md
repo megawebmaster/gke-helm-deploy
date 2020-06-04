@@ -6,10 +6,10 @@ This image is based on Bitnami's `kubectl` image.
 
 ## Versions
 
-Image   | kubectl | Helm  
-------- | ------- | -----
-3.0.2-1 | 1.12.10 | 3.0.2
-3.2.1-1 | 1.18.3  | 3.2.1
+Image                                 | kubectl | Helm  
+------------------------------------- | ------- | -----
+megawebmaster/gke-helm-deploy:3.0.2-1 | 1.12.10 | 3.0.2
+megawebmaster/gke-helm-deploy:3.2.1-1 | 1.18.3  | 3.2.1
 
 # How to use it?
 
