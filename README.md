@@ -9,7 +9,7 @@ This image is based on Bitnami's `kubectl` image.
 Image                                 | kubectl | Helm  
 ------------------------------------- | ------- | -----
 megawebmaster/gke-helm-deploy:3.0.2-1 | 1.12.10 | 3.0.2
-megawebmaster/gke-helm-deploy:3.2.1-1 | 1.18.3  | 3.2.1
+megawebmaster/gke-helm-deploy:3.2.1-2 | 1.18.3  | 3.2.1
 
 # How to use it?
 
@@ -23,10 +23,12 @@ Example:
 
 ```
 docker run --rm \
+    -e KUBECONFIG=/tmp/kubeconfig.yaml \
+    -e GOOGLE_APPLICATION_CREDENTIALS=/tmp/google-key.json \
     -v /home/helm/google-key.json:/tmp/google-key.json \
     -v /home/helm/chart:/tmp/chart \
     -v /home/helm/kubeconfig.yaml:/tmp/kubeconfig.yaml \
-  megawebmaster/gke-helm-deploy:3.2.1-1 \
+  megawebmaster/gke-helm-deploy:3.2.1-2 \
   upgrade my-app /tmp/chart
 ``` 
 
