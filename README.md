@@ -10,6 +10,7 @@ Image                                 | kubectl | Helm
 ------------------------------------- | ------- | -----
 megawebmaster/gke-helm-deploy:3.0.2-1 | 1.12.10 | 3.0.2
 megawebmaster/gke-helm-deploy:3.2.1-2 | 1.18.3  | 3.2.1
+megawebmaster/gke-helm-deploy:3.3.1-1 | 1.18.8  | 3.3.1
 
 # How to use it?
 
@@ -28,7 +29,7 @@ docker run --rm \
     -v /home/helm/google-key.json:/tmp/google-key.json \
     -v /home/helm/chart:/tmp/chart \
     -v /home/helm/kubeconfig.yaml:/tmp/kubeconfig.yaml \
-  megawebmaster/gke-helm-deploy:3.2.1-2 \
+  megawebmaster/gke-helm-deploy:3.3.1-1 \
   upgrade my-app /tmp/chart
 ``` 
 
